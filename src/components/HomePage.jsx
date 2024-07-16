@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { setNumberofQustions, setDifficultyofQustion, setCategoryofQustions, setTypeofQustion } from '../actions/action';
 
 function HomePage() {
-    
+
     const dispatch = useDispatch();
     const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
@@ -37,6 +37,7 @@ function HomePage() {
                 <div className='mb-4'>
                     <label htmlFor="count" className='block text-xl font-semibold mb-2'>Number of Questions:</label>
                     <select
+                        required
                         {...register("count")}
                         name="count"
                         id="count"
@@ -51,6 +52,7 @@ function HomePage() {
                 <div className='mb-4'>
                     <label htmlFor="category" className='block text-xl font-semibold mb-2'>Quiz Category:</label>
                     <select
+                        required
                         {...register("category")}
                         name="category"
                         id="category"
@@ -87,6 +89,7 @@ function HomePage() {
                 <div className='mb-4'>
                     <label htmlFor="difficulty" className='block text-xl font-semibold mb-2'>Quiz Difficulty:</label>
                     <select
+                        required
                         {...register("difficulty")}
                         name="difficulty"
                         id="difficulty"
@@ -100,6 +103,7 @@ function HomePage() {
                 <div className='mb-6'>
                     <label htmlFor="type" className='block text-xl font-semibold mb-2'>Quiz Type:</label>
                     <select
+                        required
                         {...register("type")}
                         name="type"
                         id="type"
